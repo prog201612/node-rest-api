@@ -1,4 +1,4 @@
-const z = require('zod') // per validar les dades
+import z from 'zod' // per validar les dades
 
 // z.string({invalid_type_error: 'El títol ha de ser una cadena', required_error: 'El títol és obligatori'})
 const movieSchema = z.object({
@@ -14,16 +14,16 @@ const movieSchema = z.object({
 }) 
 // .optiona(), .nullable(), .default(), .transform(), .refine(), .parse(), .partial(), .pick(), .omit(), .merge(), .extend()
 
-function validateMovie (object) {
+export function validateMovie (object) {
     // safeParse: retorna un objecte amb dues propietats, success i data
     return movieSchema.safeParse(object)
     // també tenim la versió asincrona: safeParseAsync
 }
 
 // validació parcial a l'hora de fer un PATCH (és una estratègia) no és la que he utilitzat
-function validatePartialMovie (object) {
+export function validatePartialMovie (object) {
     // Converteix totes les propietats en opcionals i valida només les que ens passen
     return movieSchema.partial().safeParse(object)
 }
 
-module.exports = { validateMovie }
+//module.exports = { validateMovie }
