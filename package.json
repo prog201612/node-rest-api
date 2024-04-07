@@ -1,0 +1,20 @@
+{
+  "name": "node-rest-api",
+  "version": "1.0.0",
+  "description": "A NodeJS REST API deployed on fl0",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prog201612/node-rest-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/prog201612/node-rest-api/issues"
+  },
+  "homepage": "https://github.com/prog201612/node-rest-api#readme"
+}
