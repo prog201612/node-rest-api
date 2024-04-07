@@ -1,0 +1,34 @@
+### 1. API REST
+GET http://localhost:3000/
+
+### 2. API REST - MOVIES
+GET http://localhost:3000/movies
+
+### 3. API REST - MOVIES by ID
+GET http://localhost:3000/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+
+### 4. API REST - MOVIES by genre
+GET http://localhost:3000/movies/?genre=action
+
+### 5. API REST - MOVIES POST
+POST http://localhost:3000/movies
+Content-Type: application/json
+
+{
+    "title": "The Paquitu",
+    "year": 1971,
+    "director": "El polla",
+    "duration": 142,
+    "poster": "https://i.ebayimg.com/images/g/4goAAOSwMyBe7hnQ/s-l1200.webp",
+    "genre": ["Drama"],
+    "rate": 1.3
+  }
+
+### 6. API REST - MOVIES PATCH
+PATCH http://localhost:3000/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+Content-Type: application/json
+
+{
+    "id": "kagaste",
+    "year": 1969
+}

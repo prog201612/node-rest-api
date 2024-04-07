@@ -1,7 +1,7 @@
 const express = require('express')
 const crypto = require('node:crypto') // per crear un id únic
-const { validateMovie } = require('./src/movies')
-const movies = require('./src/movies.json')
+const { validateMovie } = require('./schemas/movies')
+const movies = require('./web/movies.json')
 const app = express()
 
 // S e t t i n g s
